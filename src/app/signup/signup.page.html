@@ -1,0 +1,92 @@
+<ion-header class="ion-no-border header" mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="back_button">
+      <ion-back-button
+        text=""
+        icon="arrow-back-outline"
+        defaultHref="/login"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{"Sign Up" }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" fullscreen="true">
+  <p class="title">{{"Sign Up For Free" }}</p>
+  <form [formGroup]="credentials" >
+    <div class="input_div">
+      <p class="title">{{"Full name" }}</p>
+      <div class="input">
+        <ion-input type="text" formControlName="full_name" placeholder="{{'Full name' }}"></ion-input>
+      </div>
+      
+
+    </div>
+    
+    <br />
+
+
+
+   
+
+    <div class="input_div">
+      <p class="title">{{"Email" }}</p>
+      <div class="input">
+        <ion-input type="email" formControlName="email" placeholder="{{'Email' }}"></ion-input>
+      </div>
+    </div>
+
+    <br />
+    <div class="input_div">
+      <p class="title">{{"Password" }}</p>
+      <div class="input">
+        <ion-row>
+          <ion-col size="9.5" class="ion-no-padding">
+            <ion-input
+              [type]="icon == 'eye' ? 'text' : 'password'"
+              required
+              formControlName="password"
+              placeholder="{{'Password' }}"
+            ></ion-input>
+          </ion-col>
+          <ion-col class="ion-no-padding" size="2.5">
+            <ion-button fill="clear" (click)="toggle()">
+              <ion-icon
+                slot="icon-only"
+                [name]="icon"
+              ></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+     
+    </div>
+  </form>
+
+  <ion-button
+    expand="block"
+    class="add-to-cart-button"
+    color="primary"
+    expand="block"
+    (click)="onLogin()"
+    [disabled]="!credentials.valid"
+    fill="solid"
+   
+  >
+    {{"Sign Up" }}
+  </ion-button>
+  <br />
+</ion-content>
+
+<ion-footer mode="ios" class="ion-no-border ion-text-center">
+  <ion-toolbar>
+    <p>
+      Already have an account?
+      <span
+        [routerLink]="['/login']"
+        routerLinkActive="router-link-active"
+        style="color: var(--ion-color-primary)"
+        >Sign In</span
+      >
+    </p>
+  </ion-toolbar>
+</ion-footer>

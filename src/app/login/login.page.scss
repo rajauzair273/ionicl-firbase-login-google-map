@@ -1,0 +1,157 @@
+ion-content {
+    .title {
+      //font-family: 'Plus Jakarta Sans';
+      font-family: 'font-bold';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: -0.03em;
+      margin-top: 0;
+    }
+  
+    .input_div {
+      .title {
+        /* Body 14 - Semi Bold */
+  
+        //font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+  
+        letter-spacing: -0.02em;
+      }
+  
+      .input {
+  
+        border: 1px solid #EBEBEB;
+        border-radius: 12px;
+        padding-left: 5px;
+  
+        ion-input {
+          --placeholder-color: #9CA4AB;
+          --placeholder-font-style: 2px;
+          margin: 6px;
+          //   height: 52px;
+        }
+  
+  
+  
+      }
+  
+      
+    }
+  
+  
+  }
+
+  
+  
+  .r_f {
+    display: flex;
+    justify-content: space-between;
+  
+    .remember_me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+      }
+  
+    }
+  
+    .forgot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      span {
+        color: var(--ion-color-primary);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  
+  }
+  
+  .a_s_w {
+    text-align: center;
+    /* Body 12 - Medium */
+  
+    //font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.02em;
+  
+    color: #5F636B;
+  
+    opacity: 0.7;
+  }
+  
+  hr {
+    border-bottom: 1px solid #EBEBEB;
+  }
+  
+  .facebook {
+    --background: #345288;
+    --border-radius: 26px;
+    height: 52px;
+    width: 158px;
+  
+    ion-icon {
+  
+      color: #ffffff;
+  
+    }
+  }
+  
+  .google {
+    // --background: #345288;
+    --color: #111111;
+    --border-radius: 26px;
+    --border-color: rgba(0, 0, 0, 0.15);
+    height: 52px;
+    width: 158px;
+  
+  
+  }
+  
+  
+  ion-footer {
+    p {
+      //font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+
+  .error {
+    background: #FEEFEF;
+    border-radius: 4px;
+    color: var(--ion-color-danger);
+    padding: 9px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+
+
+  }
+  

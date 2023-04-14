@@ -1,0 +1,80 @@
+<ion-header class="ion-no-border header" mode="ios">
+  <ion-toolbar> </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <p class="title">{{"Sign In to Your Account"}}</p>
+  <form [formGroup]="credentials">
+    <div class="input_div">
+      <p class="title">{{"Email"}}</p>
+      <div class="input">
+        <ion-input
+          type="email"
+          formControlName="email"
+          placeholder="{{'Email/Username'}}"
+        ></ion-input>
+      </div>
+      <p class="error" *ngIf="(email.dirty || email.touched) && email.errors">
+        Email is invalid
+      </p>
+    </div>
+    <br />
+    <div class="input_div">
+      <p class="title">{{"Password"}}</p>
+      <div class="input">
+        <ion-row>
+          <ion-col size="9.5" class="ion-no-padding">
+            <ion-input
+              [type]=" icon == 'eye' ? 'text' : 'password'"
+              placeholder="{{'Password'}}"
+              formControlName="password"
+            ></ion-input>
+          </ion-col>
+          <ion-col class="ion-no-padding" size="2.5">
+            <ion-button fill="clear" (click)="toggle()">
+              <ion-icon
+                (click)="icon='eye'"
+                slot="icon-only"
+                name="eye"
+              ></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <p
+        class="error"
+        *ngIf="(password.dirty || password.touched) && password.errors"
+      >
+        Password needs to be 6 characters
+      </p>
+    </div>
+
+    <br />
+  </form>
+
+  <ion-button
+    expand="block"
+    class="add-to-cart-button"
+    expand="block"
+    fill="solid"
+    (click)="login()"
+    [disabled]="!credentials.valid"
+  >
+    {{"Sign In"}}
+  </ion-button>
+  <br />
+  <ion-row> </ion-row>
+</ion-content>
+
+<ion-footer mode="ios" class="ion-no-border ion-text-center">
+  <ion-toolbar>
+    <p>
+      {{"Don't have an account?"}}
+      <span
+        [routerLink]="['/signup']"
+        routerLinkActive="router-link-active"
+        style="color: var(--ion-color-primary)"
+        >{{"Sign up"}}</span
+      >
+    </p>
+  </ion-toolbar>
+</ion-footer>
